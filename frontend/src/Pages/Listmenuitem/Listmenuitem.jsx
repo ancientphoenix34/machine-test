@@ -13,7 +13,7 @@ const Listmenuitem = () => {
 
   const fetchMenuItems = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/menuitem/getMenuItems');
+      const response = await axios.get('https://machine-test-backend-yd4v.onrender.com/api/menuitem/getMenuItems');
       setMenuItems(response.data);
     } catch (error) {
       console.error('Error fetching menu items:', error);
@@ -22,7 +22,7 @@ const Listmenuitem = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/menuitem/deleteMenuItem/${id}`);
+      await axios.delete(`https://machine-test-backend-yd4v.onrender.com/api/menuitem/deleteMenuItem/${id}`);
       fetchMenuItems(); // Refresh the list after deletion
     } catch (error) {
       console.error('Error deleting menu item:', error);
