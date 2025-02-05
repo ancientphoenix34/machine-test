@@ -14,7 +14,7 @@ const Menu = () => {
 
   const fetchMenus = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/menus/getMenus');
+      const response = await axios.get('https://machine-test-backend-yd4v.onrender.com/api/menus/getMenus');
       setMenus(response.data);
 
       if (response.data.length > 0) {
@@ -30,7 +30,7 @@ const Menu = () => {
 
   const fetchMenuItems = async (menuId) => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/menus/getMenuById/${menuId}`);
+      const response = await axios.get(`https://machine-test-backend-yd4v.onrender.com/api/menus/getMenuById/${menuId}`);
       setMenuItems(response.data.items);
     } catch (error) {
       console.error('Error fetching menu items:', error);
