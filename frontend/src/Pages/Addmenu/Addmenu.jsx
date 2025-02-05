@@ -15,7 +15,7 @@ const AddMenu = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/menus/createMenu', menuData);
+      const response = await axios.post('https://machine-test-backend-yd4v.onrender.com/api/menus/createMenu', menuData);
       setMessage('Menu created successfully!');
       setMenuData({ name: '', description: '' });
     } catch (error) {
