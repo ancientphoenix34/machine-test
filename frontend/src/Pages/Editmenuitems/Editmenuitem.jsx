@@ -16,7 +16,7 @@ const Editmenuitem = () => {
 
   const fetchMenuItemDetails = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/menuitem/getMenuItems`);
+      const response = await axios.get(`https://machine-test-backend-yd4v.onrender.com/api/menuitem/getMenuItems`);
       const item = response.data.find(item => item._id === id);
       if (item) {
         setMenuItemData(item);
@@ -40,7 +40,7 @@ const Editmenuitem = () => {
         price: formData.price || menuItemData.price,
       };
 
-      await axios.put(`http://localhost:5000/api/menuitem/updateMenuItem/${id}`, updatedData);
+      await axios.put(`https://machine-test-backend-yd4v.onrender.com/api/menuitem/updateMenuItem/${id}`, updatedData);
       setMessage('Menu item updated successfully!');
       setTimeout(() => navigate('/list-menuitem'), 1500);
     } catch (error) {
