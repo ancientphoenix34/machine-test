@@ -16,7 +16,7 @@ const Editmenu = () => {
 
   const fetchMenuDetails = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/menus/getMenuById/${id}`);
+      const response = await axios.get(`https://machine-test-backend-yd4v.onrender.com/api/menus/getMenuById/${id}`);
       setMenuData({
         name: response.data.name || '',
         description: response.data.description || '',
