@@ -13,7 +13,7 @@ const Addmenuitem = () => {
 
   const fetchMenus = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/menus/getMenus');
+      const response = await axios.get('https://machine-test-backend-yd4v.onrender.com/api/menus/getMenus');
       setMenus(response.data);
     } catch (error) {
       console.error('Error fetching menus:', error);
@@ -28,7 +28,7 @@ const Addmenuitem = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/menuitem/createMenuItem', menuItemData);
+      await axios.post('https://machine-test-backend-yd4v.onrender.com/api/menuitem/createMenuItem', menuItemData);
       setMessage('Menu item added successfully!');
       setMenuItemData({ name: '', description: '', price: '', menuId: '' });
     } catch (error) {
